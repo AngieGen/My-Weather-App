@@ -1,0 +1,105 @@
+/* Main color, font of the page*/
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 1px 1px 3px #0000009a;
+  color: white;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Main color, font of the Search-bar*/
+.search-panel {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.706);
+  padding: 3px 0;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  text-align: right;
+}
+/* Main color, font of the Search-bar*/
+.form-for-search {
+  margin-right: 10px;
+}
+.form-for-city {
+  width: 170px;
+  box-sizing: border-box;
+  border: 0;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.567);
+  margin-right: 5px;
+  padding: 5px 15px;
+  transition: width 0.4s ease-in-out;
+}
+.form-for-city:focus {
+  width: 60%;
+}
+/* Main color, font of the Search-bar*/
+.search-button,
+button {
+  padding: 7px 16px;
+  color: white;
+  background-color: rgba(137, 43, 226, 0.239);
+  margin-right: 5px;
+  border-radius: 4px;
+  border: none;
+}
+/* Main color, font of the Search-bar*/
+.City {
+  text-align: center;
+  padding: 10px;
+  margin: 50px 80px;
+}
+/* Size of City*/
+.current-city {
+  font-size: 50px;
+}
+/* Size of current degrees in city */
+.current-degrees {
+  font-size: 50px;
+}
+.units {
+  text-decoration: none;
+  margin: 5px;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* Size of current weather (sunny, cloudy etc.) */
+.current-weather {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+/* You have to add informaton about MIN and MAX temperature */
+.Forecast-for-next-days {
+  font-size: 12px;
+}
+/* About author */
+.author {
+  /*opacity: 0.7;*/
+  display: block;
+  text-align: center;
+}
+/* Linckedin icon */
+.linkedin-image {
+  font-size: 20px;
+}
+a:any-link {
+  color: white;
+}
