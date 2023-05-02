@@ -1,13 +1,17 @@
 /* Main color, font of the page*/
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
-
   font-family: "Montserrat", sans-serif;
   text-shadow: 1px 1px 3px #0000009a;
   color: white;
+  background-color: rgba(167, 166, 166, 0.749);
+}
+
+.City,
+.Forecast-for-next-days {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  /*height: 30vh;*/
 }
 @keyframes gradient {
   0% {
@@ -61,7 +65,9 @@ button {
 .City {
   text-align: center;
   padding: 10px;
-  margin: 50px 80px;
+  margin: 50px auto;
+  max-width: 600px;
+  height: 30vh;
 }
 /* Size of City*/
 .current-city {
@@ -89,6 +95,9 @@ a:hover {
 /* You have to add informaton about MIN and MAX temperature */
 .Forecast-for-next-days {
   font-size: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 15vh;
 }
 /* About author */
 .author {
