@@ -33,7 +33,7 @@
     <!--Library axios, allows us  to speak with API-->
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App by Angie</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <!--Search panel (menu)-->
@@ -60,22 +60,26 @@
         <!--City and day, time-->
         <div class="container text-center">
           <div class="row row-cols-2">
+            <!--City table-->
             <div class="col">
-              Today in
               <div class="current-city" id="current-city">Riga</div>
-              <div id="current-date">Sunday 16:15</div>
+              <div class="current-date" id="current-date">Sunday 16:15</div>
             </div>
             <!--Degrees, Forecast, max, min-->
-            <div class="col">
+            <div class="col forecast-today">
               <br />
+              <div class="d-flex weather-image">
+                <img src="src/sunny.png" alt="Sunny" id="icon" />
+              </div>
               <span class="current-degrees" id="current-degrees">2</span>
+
               <span class="units">
                 <a href="#" id="celcius-link">°C</a> |
                 <a href="#" id="fahrenheit-link">°F</a>
               </span>
               <div class="current-weather" id="current-weather">Sunny</div>
-              <span>Max: <span id="maxTemp">15</span>°</span> |
-              <span>Min: <span id="minTemp">-1</span>°</span>
+              <span class="maxTemp"> Max: <span id="maxTemp">15</span>°</span> |
+              <span class="minTemp"> Min: <span id="minTemp">-1</span>°</span>
             </div>
           </div>
         </div>
@@ -106,25 +110,13 @@
       You can find me on
       <!--Linkedin icon from Font Awesome-->
       <i class="fa-brands fa-linkedin linkedin-image"></i>
-      <!--Here starts -->
-      <div
-        class="badge-base LI-profile-badge"
-        data-locale="ru_RU"
-        data-size="medium"
-        data-theme="light"
-        data-type="VERTICAL"
-        data-vanity="anželika-genise-467a2221a"
-        data-version="v1"
+      <!--link for linkedin -->
+      <a
+        class="badge-base__link LI-simple-link"
+        href="https://lv.linkedin.com/in/an%C5%BEelika-genise?trk=profile-badge"
+        >Anželika Genise</a
       >
-        <a
-          class="badge-base__link LI-simple-link"
-          href="https://lv.linkedin.com/in/an%C5%BEelika-genise-467a2221a?trk=profile-badge"
-          target="_blank"
-          >Anželika Genise
-        </a>
-      </div>
-      <!--Here ends -->
     </small>
-    <script src="app.js"></script>
+    <script src="src/app.js"></script>
   </body>
 </html>

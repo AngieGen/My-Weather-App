@@ -7,7 +7,9 @@ body {
 }
 
 .City,
-.Forecast-for-next-days {
+.Forecast-for-next-days,
+.search-button,
+button {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -56,30 +58,47 @@ body {
 button {
   padding: 7px 16px;
   color: white;
-  background-color: rgba(137, 43, 226, 0.239);
   margin-right: 5px;
   border-radius: 4px;
   border: none;
 }
 /* Main color, font of the Search-bar*/
 .City {
-  text-align: center;
   padding: 10px;
   margin: 50px auto;
   max-width: 600px;
-  height: 30vh;
+  height: 25vh;
 }
 /* Size of City*/
 .current-city {
-  font-size: 50px;
+  font-size: 70px;
+  padding-top: 25px;
 }
+
 /* Size of current degrees in city */
+.forecast-today {
+  position: relative;
+}
+.weather-image img {
+  position: absolute;
+  height: 130px;
+  width: 130px;
+  margin-left: 70px;
+  bottom: 45px;
+  opacity: 90%;
+}
+
 .current-degrees {
-  font-size: 50px;
+  position: relative;
+  font-size: 70px;
+  top: 20px;
 }
 .units {
+  position: relative;
   text-decoration: none;
   margin: 5px;
+  top: -17px;
+  right: 10px;
 }
 a:link {
   text-decoration: none;
@@ -89,15 +108,20 @@ a:hover {
 }
 /* Size of current weather (sunny, cloudy etc.) */
 .current-weather {
+  position: relative;
   font-size: 20px;
   text-transform: capitalize;
 }
 /* You have to add informaton about MIN and MAX temperature */
+.maxTemp,
+.minTemp {
+  font-size: 12px;
+}
 .Forecast-for-next-days {
   font-size: 12px;
   max-width: 600px;
   margin: 0 auto;
-  height: 15vh;
+  height: 10vh;
 }
 /* About author */
 .author {
