@@ -64,13 +64,18 @@
             <div class="col">
               <div class="current-city" id="current-city">Riga</div>
               <div class="current-date" id="current-date">Sunday 16:15</div>
+
+              <span class="current-humidity">
+                Humidity: <span id="current-humidity">60</span>%
+              </span>
+              <span class="current-wind-speed">
+                Wind: <span id="current-wind-speed">3</span> km/h
+              </span>
             </div>
             <!--Degrees, Forecast, max, min-->
             <div class="col forecast-today">
               <br />
-              <div class="d-flex weather-image">
-                <img src="src/sunny.png" alt="Sunny" id="icon" />
-              </div>
+              <div class="d-flex weather-image" id="icon"></div>
               <span class="current-degrees" id="current-degrees">2</span>
 
               <span class="units">
@@ -85,7 +90,8 @@
         </div>
       </section>
     </div>
-    <!--Forecast for the next 6 days-->
+
+    <!-- Forecast for the next 6 days 
     <div
       class="container text-center border-0 rounded shadow Forecast-for-next-days"
     >
@@ -97,8 +103,8 @@
         <div class="col">Friday</div>
         <div class="col">Saturday</div>
       </div>
-    </div>
-
+    </div> 
+  -->
     <!--Information about author and link for her profile-->
     <hr />
     <small class="author">

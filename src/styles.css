@@ -75,6 +75,11 @@ button {
   padding-top: 25px;
 }
 
+.current-humidity,
+.current-wind-speed {
+  font-size: 12px;
+}
+
 /* Size of current degrees in city */
 .forecast-today {
   position: relative;
@@ -109,10 +114,9 @@ a:hover {
 /* Size of current weather (sunny, cloudy etc.) */
 .current-weather {
   position: relative;
-  font-size: 20px;
+  font-size: 15px;
   text-transform: capitalize;
 }
-/* You have to add informaton about MIN and MAX temperature */
 .maxTemp,
 .minTemp {
   font-size: 12px;

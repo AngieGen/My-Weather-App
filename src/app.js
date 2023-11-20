@@ -34,6 +34,10 @@ let days = [
 ];
 let day = days[now.getDay()];
 
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showTemperature(response) {
@@ -52,6 +56,14 @@ function showTemperature(response) {
   document.querySelector("#minTemp").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  document.querySelector("#current-humidity").innerHTML =
+    response.data.main.humidity;
+  document.querySelector("#current-wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector(
+    "#icon"
+  ).innerHTML = `<img src="https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png" alt="Sunny" />`;
 }
 function searchCity(city) {
   let apiKey = "320a6e66b85389b30ab1efe865b1d5b7";
