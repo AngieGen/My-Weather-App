@@ -5,15 +5,28 @@ body {
   color: white;
   background-color: rgba(167, 166, 166, 0.749);
 }
-
-.City,
-.Forecast-for-next-days,
-.search-button,
-button {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+.City {
+  background: linear-gradient(-45deg, #44ddf4, #8f62f6, #fb55ab, #fec55c);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  /*height: 30vh;*/
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.search-button,
+button {
+  background: linear-gradient(-45deg, #fec55c, #fb55ab, #8f62f6, #44ddf4);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 @keyframes gradient {
   0% {
@@ -28,26 +41,18 @@ button {
 }
 /* Main color, font of the Search-bar*/
 .search-panel {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.706);
   padding: 3px 0;
-  width: 100%;
-  top: 0;
-  margin: 0;
   text-align: right;
 }
-/* Main color, font of the Search-bar*/
-.form-for-search {
-  margin-right: 10px;
-}
 .form-for-city {
-  width: 170px;
+  width: 300px;
   box-sizing: border-box;
   border: 0;
+  border-radius: 4px;
   color: white;
   background-color: rgba(255, 255, 255, 0.567);
   margin-right: 5px;
-  padding: 5px 15px;
+  padding: 7px 15px;
   transition: width 0.4s ease-in-out;
 }
 .form-for-city:focus {
@@ -56,54 +61,44 @@ button {
 /* Main color, font of the Search-bar*/
 .search-button,
 button {
+  text-align: right;
   padding: 7px 16px;
   color: white;
   margin-right: 5px;
   border-radius: 4px;
   border: none;
 }
-/* Main color, font of the Search-bar*/
 .City {
   padding: 10px;
   margin: 50px auto;
   max-width: 600px;
-  height: 25vh;
 }
 /* Size of City*/
 .current-city {
-  font-size: 50px;
+  font-size: 35px;
   padding-top: 25px;
 }
 
-.current-humidity,
-.current-wind-speed {
-  font-size: 12px;
-}
-
 /* Size of current degrees in city */
+.max-min-temp {
+  text-align: right;
+}
 .forecast-today {
-  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 .weather-image img {
-  position: absolute;
-  height: 130px;
-  width: 130px;
-  margin-left: 70px;
-  bottom: 45px;
   opacity: 90%;
 }
-
 .current-degrees {
-  position: relative;
-  font-size: 70px;
-  top: 20px;
+  font-size: 35px;
 }
 .units {
-  position: relative;
   text-decoration: none;
-  margin: 5px;
-  top: -17px;
-  right: 10px;
+  margin-bottom: 15px;
 }
 a:link {
   text-decoration: none;
@@ -111,25 +106,20 @@ a:link {
 a:hover {
   text-decoration: underline;
 }
-/* Size of current weather (sunny, cloudy etc.) */
+
 .current-weather {
-  position: relative;
   font-size: 15px;
   text-transform: capitalize;
 }
 .maxTemp,
-.minTemp {
+.minTemp,
+.current-humidity,
+.current-wind-speed {
   font-size: 12px;
 }
-.Forecast-for-next-days {
-  font-size: 12px;
-  max-width: 600px;
-  margin: 0 auto;
-  height: 10vh;
-}
+
 /* About author */
 .author {
-  /*opacity: 0.7;*/
   display: block;
   text-align: center;
 }
