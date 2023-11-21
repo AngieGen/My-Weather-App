@@ -51,9 +51,8 @@
               id="city-input"
               class="form-for-city"
             />
-            <!--Buttons-->
-            <input type="submit" value="Search" class="search-button shadow" />
-            <button class="current-button shadow">Current</button>
+            <!--Button-->
+            <input type="submit" value="Search" class="search-button" />
           </form>
         </div>
         <!--City and day, time-->
@@ -63,7 +62,7 @@
             <div class="col">
               <div class="current-city" id="current-city"></div>
               <span class="current-date" id="current-date"></span>
-              <span class="current-weather" id="current-weather"></span>
+              <div class="current-weather" id="current-weather"></div>
               <div>
                 <span class="current-humidity">
                   Humidity: <span id="current-humidity"></span>%
@@ -78,15 +77,7 @@
               <div class="forecast-today">
                 <div class="weather-image" id="icon"></div>
                 <div class="current-degrees" id="current-degrees"></div>
-                <div class="units">
-                  <a href="#" id="celcius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </div>
-              </div>
-              <div class="max-min-temp">
-                <span class="maxTemp"> Max: <span id="maxTemp">15</span>°</span>
-                |
-                <span class="minTemp"> Min: <span id="minTemp">-1</span>°</span>
+                <div class="units">°C</div>
               </div>
             </div>
           </div>

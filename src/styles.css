@@ -6,6 +6,9 @@ body {
   background-color: rgba(167, 166, 166, 0.749);
 }
 .City {
+  padding: 10px;
+  margin: 50px auto;
+  max-width: 600px;
   background: linear-gradient(-45deg, #44ddf4, #8f62f6, #fb55ab, #fec55c);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -22,8 +25,14 @@ body {
   }
 }
 
-.search-button,
-button {
+.search-button {
+  text-align: right;
+  padding: 7px 16px;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.567);
+  color: white;
+  margin-right: 5px;
+  border-radius: 4px;
+  border: none;
   background: linear-gradient(-45deg, #fec55c, #fb55ab, #8f62f6, #44ddf4);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -42,14 +51,14 @@ button {
 /* Main color, font of the Search-bar*/
 .search-panel {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-end;
   padding: 3px 0;
-  text-align: right;
+  text-align: center;
 }
 .form-for-city {
-  width: 300px;
+  width: 350px;
   box-sizing: border-box;
   border: 0;
   border-radius: 4px;
@@ -57,26 +66,8 @@ button {
   background-color: rgba(255, 255, 255, 0.567);
   margin-right: 5px;
   padding: 7px 15px;
-  /*transition: width 0.4s ease-in-out;*/
 }
-/*.form-for-city:focus {
-  width: 60%;
-}*/
-/* Main color, font of the Search-bar*/
-.search-button,
-button {
-  text-align: right;
-  padding: 7px 16px;
-  color: white;
-  margin-right: 5px;
-  border-radius: 4px;
-  border: none;
-}
-.City {
-  padding: 10px;
-  margin: 50px auto;
-  max-width: 600px;
-}
+
 /* Size of City*/
 .current-city {
   font-size: 35px;
@@ -84,9 +75,7 @@ button {
 }
 
 /* Size of current degrees in city */
-.max-min-temp {
-  text-align: right;
-}
+
 .forecast-today {
   display: flex;
   flex-wrap: nowrap;
@@ -94,29 +83,21 @@ button {
   justify-content: flex-end;
   align-items: center;
 }
-.weather-image img {
-  opacity: 90%;
-}
+
 .current-degrees {
-  font-size: 35px;
+  font-size: 100px;
 }
 .units {
   text-decoration: none;
-  margin-bottom: 15px;
-}
-a:link {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+  margin-bottom: 60px;
+  font-weight: bolder;
 }
 
 .current-weather {
-  font-size: 15px;
+  font-size: 12px;
   text-transform: capitalize;
 }
-.maxTemp,
-.minTemp,
+
 .current-humidity,
 .current-wind-speed {
   font-size: 12px;
@@ -139,4 +120,8 @@ a:hover {
 }
 a:any-link {
   color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
