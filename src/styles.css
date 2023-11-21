@@ -41,6 +41,10 @@ button {
 }
 /* Main color, font of the Search-bar*/
 .search-panel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
   padding: 3px 0;
   text-align: right;
 }
@@ -53,11 +57,11 @@ button {
   background-color: rgba(255, 255, 255, 0.567);
   margin-right: 5px;
   padding: 7px 15px;
-  transition: width 0.4s ease-in-out;
+  /*transition: width 0.4s ease-in-out;*/
 }
-.form-for-city:focus {
+/*.form-for-city:focus {
   width: 60%;
-}
+}*/
 /* Main color, font of the Search-bar*/
 .search-button,
 button {
@@ -116,6 +120,12 @@ a:hover {
 .current-humidity,
 .current-wind-speed {
   font-size: 12px;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
 /* About author */

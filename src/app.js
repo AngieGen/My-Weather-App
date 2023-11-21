@@ -16,11 +16,10 @@ function celsiusToFahrenheit(event) {
   temperature.innerHTML = Math.round(((celsisusTemp - 32) * 5) / 9);
 }
 celsius.addEventListener("click", celsiusToFahrenheit);
+
 // Current date
 let now = new Date();
-
 let currentDate = document.querySelector("#current-date");
-
 let hours = now.getHours();
 let minutes = now.getMinutes();
 let days = [
@@ -68,10 +67,9 @@ function showTemperature(response) {
 function searchCity(city) {
   let apiKey = "320a6e66b85389b30ab1efe865b1d5b7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  //let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
   axios.get(`${apiUrl}`).then(showTemperature);
-  //axios.get(`${apiUrl}${city}&units=metric&appid=${apiKey}`).then(showTemperature);
 }
+
 // Searching for city
 let form = document.querySelector("#search-form");
 function search(event) {
@@ -82,6 +80,7 @@ function search(event) {
   searchCity(searchInput.value);
 }
 form.addEventListener("submit", search);
+
 // Current location
 function showPosition(position) {
   let apiKey = "320a6e66b85389b30ab1efe865b1d5b7";
@@ -98,3 +97,50 @@ let getCurrentLocationButton = document.querySelector(".current-button");
 getCurrentLocationButton.addEventListener("click", getCurrentLocation);
 // Default city
 searchCity("Rīga");
+
+// FORECAST FOR THE WEEK (NEXT DAYS)
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+function getForecast(city) {
+  let apiKeySheCodes = "06t6cbfb24d9a82130oc6e45cee5e049";
+  let apiUrlSheCodes = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKeySheCodes}&units=metric`;
+  axios(`${apiUrlSheCodes}`).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
+  let forecastHtml = "";
+
+  response.data.daily.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="weather-forecast-day">
+     <div class="weather-forecast-date">${formatDay(day.time)}</div>
+     <img
+       src="${day.condition.icon_url}"
+       alt=""
+       width="50px"
+     />
+     <div class="weather-forecast-temperatures">
+       <span class="weather-forecast-temp-max">${Math.round(
+         day.temperature.maximum
+       )}°</span>
+       <span class="weather-forecast-temp-max">${Math.round(
+         day.temperature.minimum
+       )}°</span>
+     </div>
+     </div>`;
+    }
+  });
+  let forecast = document.querySelector("#forecast-for-next-days");
+  forecast.innerHTML = forecastHtml;
+}
+getForecast("riga");
