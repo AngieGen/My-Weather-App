@@ -33,8 +33,9 @@ function showTemperature(response) {
 
   document.querySelector("#current-humidity").innerHTML =
     response.data.temperature.humidity;
-  document.querySelector("#current-wind-speed").innerHTML =
-    response.data.wind.speed;
+  document.querySelector("#current-wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector(
     "#icon"
   ).innerHTML = `<img src="${response.data.condition.icon_url}" />`;
@@ -88,9 +89,9 @@ function displayForecast(response) {
        width="50px"
      />
      <div class="weather-forecast-temperatures">
-       <span class="weather-forecast-temp-max">${Math.round(
-         day.temperature.maximum
-       )}°</span>
+       <span class="weather-forecast-temp-max">
+        ${Math.round(day.temperature.maximum)}°
+       </span>
        <span class="weather-forecast-temp-max">${Math.round(
          day.temperature.minimum
        )}°</span>
